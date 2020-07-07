@@ -4,6 +4,7 @@ namespace Inneair\SynappsBundle\Exception;
 
 use Exception;
 use RuntimeException;
+use Symfony\Component\Validator\ConstraintViolationListInterface;
 
 /**
  * Exception thrown when an object is not valid. This class can be used in business services when needed. Controllers
@@ -12,76 +13,36 @@ use RuntimeException;
 class ValidationException extends RuntimeException
 {
     /**
-     * Global error messages.
-     * @var string[]
+     * The list of violations.
+     * @var ConstraintViolationListInterface
      */
-    private $globalErrors;
-    /**
-     * Indexed error messages by field.
-     * @var string[]
-     */
-    private $fieldErrors;
+    private $violations;
 
     /**
      * Creates an exception based on the given parameters.
      *
-     * @param array $globalErrors Global error messages (defaults to an empty array).
-     * @param array $fieldErrors Error messages indexed by field names (defaults to an empty array).
+     * @param ConstraintViolationListInterface List of constraint violations (defaults to <code>null</code>).
      * @param string $message Message (defaults to <code>null</code>).
      * @param string $code Custom error code (defaults to <code>null</code>).
      * @param Exception $previous Parent exception (defaults to <code>null</code>).
      */
     public function __construct(
-        array $globalErrors = [],
-        array $fieldErrors = [],
+        ConstraintViolationListInterface $violations = null,
         $message = null,
         $code = null,
-        Exception $previous = null
-    )
+        Exception $previous = null)
     {
         parent::__construct($message, $code, $previous);
-        $this->globalErrors = $globalErrors;
-        $this->fieldErrors = $fieldErrors;
+        $this->violations = $violations;
     }
 
     /**
-     * Adds an error message indexed by a field name.
+     * Gets the list of violations.
      *
-     * @param string $fieldName Field name.
-     * @param string $errorMessage Error message.
+     * @return ConstraintViolationListInterface List of constraint violations.
      */
-    public function addFieldError($fieldName, $errorMessage)
+    public function getViolations()
     {
-        $this->fieldErrors[$fieldName][] = $errorMessage;
-    }
-
-    /**
-     * Adds a global error message.
-     *
-     * @param string $errorMessage Error message.
-     */
-    public function addGlobalError($errorMessage)
-    {
-        $this->globalErrors[] = $errorMessage;
-    }
-
-    /**
-     * Gets the list of error messages indexed by a field names.
-     *
-     * @return string[] Error messages indexed by field names.
-     */
-    public function getFieldErrors()
-    {
-        return $this->fieldErrors;
-    }
-
-    /**
-     * Gets the list of global errors.
-     *
-     * @return string[] Global error messages.
-     */
-    public function getGlobalErrors()
-    {
-        return $this->globalErrors;
+        return $this->violations;
     }
 }

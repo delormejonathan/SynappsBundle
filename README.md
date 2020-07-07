@@ -28,29 +28,14 @@ Syntax for changes: _`<type of modification> [domain] <description>`_
 
 `<description>` is a descriptive text of the modification. 
 
-#### 1.2.0 (2016-01-07)
+#### 1.0.0 (2014-09-14)
 
-- UPG Upgrade vendors
-- REF Move tests outside src folder
-- REF Remove translator service from abstract controllers
-- REF Remove container service from abstract service
-
-#### 1.1.3 (2015-10-20)
-
-- IMP Added support of PHP 7.
-
-#### 1.1.2 (2015-10-20)
-
-- IMP Added support of PHP 5.5+.
-
-#### 1.1.0 (2015-05-29)
-
-- IMP Added HTTP abstract controller (compatibility break with the REST abstract controller).
+ * REF Migration into a dedicated VCS.
 
 ------
 ## 2. Requirements
 ### Software requirements
-- [PHP](http://www.php.net/) 5.5+
+- [PHP](http://www.php.net/) 5.5
 - [Symfony](http://www.symfony.com/) 2.5+
 
 ### PHP configuration

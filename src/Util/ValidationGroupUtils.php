@@ -22,21 +22,20 @@ final class ValidationGroupUtils
      * Group set dedicated to create operations.
      * @var string[]
      */
-    private static $createGroupSet = [self::GROUP_OTHER_FIELDS];
+    private static $createGroupSet = array(self::GROUP_OTHER_FIELDS);
     /**
      * Group set dedicated to delete operations.
      * @var string[]
      */
-    private static $deleteGroupSet = [self::GROUP_ID];
+    private static $deleteGroupSet = array(self::GROUP_ID);
     /**
      * Group set dedicated to other operations than create or delete.
      * @var string[]
      */
-    private static $defaultGroupSet = [self::GROUP_ID, self::GROUP_OTHER_FIELDS];
+    private static $defaultGroupSet = array(self::GROUP_ID, self::GROUP_OTHER_FIELDS);
 
     /**
-     * Prevents unwanted instantiations.
-     * @codeCoverageIgnore
+     * Empty private constructor to prevent erroneous instanciations.
      */
     private function __construct()
     {

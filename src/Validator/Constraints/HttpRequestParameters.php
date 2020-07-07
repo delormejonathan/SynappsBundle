@@ -15,7 +15,7 @@ class HttpRequestParameters extends Constraint
      * Array of required parameters' name.
      * @var array
      */
-    public $requiredParameters = [];
+    public $requiredParameters = array();
     /**
      * Message when at least one required parameter is missing in the request.
      * @var string
