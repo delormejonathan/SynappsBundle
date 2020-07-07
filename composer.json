@@ -34,7 +34,6 @@
 		"jms/aop-bundle" : "^1.2",
 		"jms/serializer-bundle" : "^2.0",
 		"sensio/framework-extra-bundle": "^3.0.2",
-		"symfony/symfony" : "3.3.*",
 		"psr/log" : "~1.0"
 	},
 	"require-dev" : {
