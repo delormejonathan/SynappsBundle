@@ -27,7 +27,6 @@
 		}
 	],
 	"require" : {
-		"php" : ">=5.6",
 		"doctrine/orm" : "^2.5",
 		"friendsofsymfony/rest-bundle" : "^2.2",
 		"inneair/synapps" : "^1.0",
