@@ -1,5 +1,5 @@
 {
-	"name" : "inneair/synapps-bundle",
+	"name" : "delormejonathan/synapps-bundle",
 	"version" : "1.0.0",
 	"type" : "symfony-bundle",
 	"description" : "Synapps bundle for Symfony",
@@ -21,7 +21,7 @@
 	],
 	"repositories" : [{
 			"type" : "git",
-			"url" : "https://github.com/inneair/synapps"
+			"url" : "https://github.com/delormejonathan/synapps"
 		}
 	],
 	"autoload" : {
@@ -30,7 +30,7 @@
 		}
 	},
 	"require" : {
-		"inneair/synapps" : "~1.0",
+		"delormejonathan/synapps" : "~1.0",
 		"symfony/symfony" : "~2.5",
 		"sensio/framework-extra-bundle" : "~3.0",
 		"doctrine/orm" : "~2.2,>=2.2.3",
@@ -41,7 +41,6 @@
 		"jms/serializer-bundle" : "~0.13",
 		"jms/serializer" : "0.15"
 	},
-	"minimum-stability" : "stable",
 	"extra" : {
 		"branch-alias" : {
 			"dev-master" : "1.0.x-dev"
