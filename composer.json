@@ -1,10 +1,27 @@
 {
 	"name" : "inneair/synapps-bundle",
+	"version" : "1.0.0",
 	"type" : "symfony-bundle",
+	"description" : "Synapps bundle for Symfony",
+	"keywords" : [
+		"inneair",
+		"synapps",
+		"file",
+		"system",
+		"service",
+		"controller",
+		"aop",
+		"transaction"
+	],
 	"license" : "MIT",
 	"authors" : [{
 			"name" : "Innéair",
 			"homepage" : "http://www.inneair.com/"
+		}
+	],
+	"repositories" : [{
+			"type" : "git",
+			"url" : "https://github.com/inneair/synapps"
 		}
 	],
 	"autoload" : {
@@ -12,40 +29,22 @@
 			"Inneair\\SynappsBundle\\" : "src/"
 		}
 	},
-    "autoload-dev": {
-        "psr-4": {
-			"Inneair\\SynappsBundle\\Test\\" : "tests/"
-        },
-        "files": [
-            "vendor/symfony/symfony/src/Symfony/Component/VarDumper/Resources/functions/dump.php"
-        ]
-    },
-	"repositories": [
-		{
-			"type": "git",
-			"url": "https://github.com/Inneair/synapps"
-		}
-	],
 	"require" : {
-		"doctrine/orm" : "^2.5",
-		"friendsofsymfony/rest-bundle" : "^2.2",
-		"inneair/synapps" : "^1.0",
-		"inneair/transaction-bundle": "^1.0",
-		"jms/aop-bundle" : "^1.2",
-		"jms/serializer-bundle" : "^2.0",
-		"sensio/framework-extra-bundle": "^3.0.2",
-		"psr/log" : "~1.0"
-	},
-	"require-dev" : {
-		"phpunit/phpunit" : "^6.2"
+		"inneair/synapps" : "~1.0",
+		"symfony/symfony" : "~2.5",
+		"sensio/framework-extra-bundle" : "~3.0",
+		"doctrine/orm" : "~2.2,>=2.2.3",
+		"friendsofsymfony/rest-bundle" : "~1.2",
+		"friendsofsymfony/user-bundle" : "~1.3",
+		"psr/log" : "~1.0",
+		"jms/aop-bundle" : "~1.0",
+		"jms/serializer-bundle" : "~0.13",
+		"jms/serializer" : "0.15"
 	},
 	"minimum-stability" : "stable",
-	"config" : {
-		"bin-dir" : "bin"
-	},
 	"extra" : {
 		"branch-alias" : {
-			"dev-master" : "1.1.x-dev"
+			"dev-master" : "1.0.x-dev"
 		}
 	}
 }
